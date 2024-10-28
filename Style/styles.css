@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@font-face {
+    font-family: 'Montseratt';
+    src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
 body {
     background-image: url(../Asset/bgPusdatin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Montseratt';
+    font-family: 'Montseratt', sans-serif;
+    
 }
 .header-container {
     display: flex;
@@ -29,5 +36,6 @@ ul {
 }
 
 li {
-    font-size: 80px;
+    font-size: 20px;
+    
 }
