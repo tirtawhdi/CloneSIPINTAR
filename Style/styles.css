@@ -15,8 +15,13 @@ body {
 }
 .header-container {
     display: flex;
+<<<<<<< HEAD
     background-color: #f2f2f2a6;
     height: 5.2rem;
+=======
+    background-color: rgb(37,37,37);
+    height: 7.2rem;
+>>>>>>> 4e6d02c0ab4139d80defa5e72a32d38a0884092a
 
 }
 .title{
@@ -39,9 +44,11 @@ body {
     color: white;
 
 }
+
 ul {
     display: flex;
     list-style: none;
+    gap: 20px;
 }
 
 li {
