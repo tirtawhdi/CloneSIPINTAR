@@ -21,6 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
+    margin-top: 0%;
     
 }
 .title img{
@@ -44,7 +45,7 @@ body {
 .navbar ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 10px;
     padding: 0px;
     margin: 0px;
 }
@@ -55,9 +56,17 @@ body {
 .navbar ul li {
     font-size: 18px;
     color: white;
+    padding: 5px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    
     
 }
 .navbar ul li:hover {
-    background-color: black;
+    background-color: rgb(50, 38, 228);
+    
 }
 
