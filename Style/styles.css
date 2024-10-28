@@ -46,7 +46,9 @@ body {
     text-decoration: none;
 
 }
-
+.navbar {
+    margin-left: 80px;
+}
 ul {
     display: flex;
     list-style: none;
