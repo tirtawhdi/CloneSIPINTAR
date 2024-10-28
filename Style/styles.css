@@ -15,7 +15,7 @@ body {
 }
 .header-container {
     display: flex;
-    background-color: #f2f2f2a6;
+    background-color: rgb(37,37,37);
     height: 7.2rem;
 
 }
@@ -30,9 +30,11 @@ body {
     font-weight: bold;
 
 }
+
 ul {
     display: flex;
     list-style: none;
+    gap: 20px;
 }
 
 li {
