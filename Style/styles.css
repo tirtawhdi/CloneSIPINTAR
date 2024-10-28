@@ -9,7 +9,9 @@ body {
 }
 .header-container {
     display: flex;
-    height: 5.2rem;
+    height: 80px;
+    width: 1600px;
+    border-radius: 5px;
     background-color: rgb(37,37,37);
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
 }
@@ -31,24 +33,30 @@ body {
     font-size: 30px;
     color: white;
     width: 200px;
-
-
 }
 .title a{
     text-decoration: none;
 }
 .navbar {
+
     justify-content: space-between
 }
-ul {
+.navbar ul {
     display: flex;
     list-style: none;
     gap: 30px;
-    margin-bottom: 0 !important;
+    padding: 0px;
+    margin: 0px;
+}
+.navbar ul a {
+    text-decoration: none;
 }
 
-li {
+.navbar ul li {
     font-size: 18px;
     color: white;
     
+}
+.navbar ul li:hover {
+    background-color: black;
 }
