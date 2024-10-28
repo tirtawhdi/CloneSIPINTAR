@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-image: url(../Asset/bgPusdatin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'montseratt';
+}
+.header-container {
+    display: flex;
+    background-color: #f2f2f2a6;
+    height: 7.2rem;
+
+}
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    font-size: 80px;
+}
