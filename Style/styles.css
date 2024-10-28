@@ -1,16 +1,9 @@
-@font-face {
-    font-family: 'Montseratt';
-    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-@font-face {
-    font-family: 'Poppins';
-    src: url(../fonts/Poppins/Poppins-Medium.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     background-image: url(../Asset/bgPusdatin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Montseratt', sans-serif;
+    font-family: 'Montserrat';
     color: white;
     
 }
@@ -19,28 +12,24 @@ body {
     height: 5.2rem;
     background-color: rgb(37,37,37);
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
-    height: 5.2rem;
-    align-items: center;
 }
 .title{
-    display: flex; 
-    height: 70px;
-    margin: 7px;
-    width: 230px;
-   
+    display: flex;
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     
 }
 .title img{
     height: 60px;
     width: 60px;
-    margin: 5px;
-    justify-content: center;
 }
 .title h1{
-    font-weight: bold;
+    margin: 0px;
+    font-weight: bolder;
     font-size: 30px;
     color: white;
-    margin-top: 17px;
     width: 200px;
 
 
@@ -49,8 +38,6 @@ body {
     text-decoration: none;
 }
 .navbar {
-    margin-left: 80px;
-    align-items: center;
     justify-content: space-between
 }
 ul {
@@ -61,7 +48,6 @@ ul {
 }
 
 li {
-    margin: auto;
     font-size: 18px;
     color: white;
     
