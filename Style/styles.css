@@ -4,7 +4,7 @@ body {
     background-image: url(../Asset/bgPusdatin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'montseratt';
+    font-family: 'Montseratt';
 }
 .header-container {
     display: flex;
