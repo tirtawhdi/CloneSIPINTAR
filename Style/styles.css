@@ -16,18 +16,27 @@ body {
 .header-container {
     display: flex;
     background-color: #f2f2f2a6;
-    height: 7.2rem;
+    height: 5.2rem;
 
 }
 .title{
     display: flex;
+    /* background-color: red; */
+    height: 70px;
+    margin: 7px;
+    width: 230px;
+    
 }
 .title img{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    justify-content: center;
 }
 .title h1{
     font-weight: bold;
+    font-size: 30px;
+    color: white;
 
 }
 ul {
