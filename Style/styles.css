@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Montseratt';
-    src: url(../fonts/Montserrat/static/Montserrat-Medium.ttf);
+    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf);
 }
 @font-face {
     font-family: 'Poppins';
@@ -49,7 +49,9 @@ body {
 .title a{
     text-decoration: none;
 }
-
+.navbar {
+    margin-left: 80px;
+}
 ul {
     display: flex;
     list-style: none;
