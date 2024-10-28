@@ -12,6 +12,17 @@ body {
     height: 7.2rem;
 
 }
+.title{
+    display: flex;
+}
+.title img{
+    height: 100px;
+    width: 100px;
+}
+.title h1{
+    font-weight: bold;
+
+}
 ul {
     display: flex;
     list-style: none;
