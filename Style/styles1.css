@@ -11,7 +11,7 @@ body {
     background-color: rgb(37,37,37);
     display: flex;
     height: 80px;
-    width: 1431px;
+    width: 1600px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
 }
 .title{
@@ -51,15 +51,22 @@ nav ul li {
     float: left;
     background-color: rgb(37,37,37);
 }
-nav ul li a {
+nav ul li a, p {
     display: block;
     text-decoration: none;
     color: rgb(235, 235, 235);
-    padding: 0 10px;
-    font-size: 20px;
+    padding: 0 20px;
+    font-size: 17px;
     line-height: 80px;
+    -webkit-user-drag: none;
+    user-select: none;
+    margin-bottom: 0 !important;
 }
 nav ul li a:hover {
+    color: rgb(235, 235, 235);
+    background-color: black;
+}
+nav ul li p:hover {
     color: rgb(235, 235, 235);
     background-color: black;
 }
@@ -72,13 +79,45 @@ nav ul ul {
     display: none;
     position: absolute;
     top: var(--submenu-top);
+    transition: display 0.3s ease-in-out;
+}
+nav ul li.active > ul {
+    display: block;
+    
 }
 
-nav ul li:hover > ul {
-    display: block;
-}
 
 nav ul ul li {
     float: none;
     display: list-item;
+}
+
+.arrow {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    bottom: 55px;
+    left: 60px;
+}
+.dropdown .arrow .left-icon, .dropdown .arrow .right-icon{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: rgb(235, 235, 235);
+    transition: transform 0.3s ease-in-out;
+}
+.dropdown .arrow .left-icon{
+    transform: rotate(45deg);
+    left: 8px;
+}
+.dropdown .arrow .right-icon{
+    transform: rotate(-45deg);
+}
+.dropdown.active .arrow .left-icon{
+    transform: rotate(135deg);
+}
+.dropdown.active .arrow .right-icon{
+    transform: rotate(-135deg);
 }
