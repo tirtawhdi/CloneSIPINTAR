@@ -3,7 +3,7 @@ body {
     background-image: url(../Asset/bgPusdatin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     color: white;
     
 }
@@ -11,8 +11,7 @@ body {
     background-color: rgb(37,37,37);
     display: flex;
     height: 80px;
-    width: 1470px;
-    border-radius: 5px;
+    width: 1431px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
 }
 .title{
@@ -63,4 +62,23 @@ nav ul li a {
 nav ul li a:hover {
     color: rgb(235, 235, 235);
     background-color: black;
+}
+
+:root {
+    --submenu-top: 80px;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: var(--submenu-top);
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    float: none;
+    display: list-item;
 }
