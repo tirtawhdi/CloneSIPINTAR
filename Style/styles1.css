@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-text: rgb(173, 173, 173);
+}
 body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.main-container {
+    width: 100vw;
+    height: 100vh;
     background-image: url(../Asset/bgPusdatin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    
+    background-position-y: -40px;
+    font-family: 'Montserrat', sans-serif; 
 }
 .header-container {
     background-color: rgb(37,37,37);
@@ -51,10 +61,10 @@ nav ul li {
     float: left;
     background-color: rgb(37,37,37);
 }
-nav ul li a, p {
+nav ul li a {
     display: block;
     text-decoration: none;
-    color: rgb(235, 235, 235);
+    color: var(--color-text);
     padding: 0 20px;
     font-size: 17px;
     line-height: 80px;
@@ -63,61 +73,50 @@ nav ul li a, p {
     margin-bottom: 0 !important;
 }
 nav ul li a:hover {
-    color: rgb(235, 235, 235);
-    background-color: black;
-}
-nav ul li p:hover {
-    color: rgb(235, 235, 235);
-    background-color: black;
+    color: rgb(255, 255, 255);
 }
 
-:root {
-    --submenu-top: 80px;
-}
-
-nav ul ul {
-    display: none;
-    position: absolute;
-    top: var(--submenu-top);
-    transition: display 0.3s ease-in-out;
-}
-nav ul li.active > ul {
+.dropdown {
     display: block;
-    
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 17px;
+    line-height: 80px;
+    -webkit-user-drag: none;
+    user-select: none;
+    margin-bottom: 0 !important;
+    width: 50pxx;
+    height: 80px;
+    cursor: pointer;
 }
-
-
-nav ul ul li {
-    float: none;
-    display: list-item;
+.dropdown:hover {
+    color: white
 }
-
-.arrow {
-    position: relative;
-    width: 25px;
-    height: 20px;
-    bottom: 55px;
-    left: 60px;
+.dropdown:hover > span {
+    background-color: white;
 }
-.dropdown .arrow .left-icon, .dropdown .arrow .right-icon{
+.left-icon, .right-icon{
     position: relative;
     display: inline-block;
-    width: 10px;
-    height: 3px;
+    bottom: 4px;
+    width: 9px;
+    height: 2px;
     border-radius: 20px;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--color-text);
     transition: transform 0.3s ease-in-out;
 }
-.dropdown .arrow .left-icon{
+
+.left-icon{
     transform: rotate(45deg);
-    left: 8px;
+    left: 2px;
 }
-.dropdown .arrow .right-icon{
+.right-icon{
     transform: rotate(-45deg);
+    right: 6px;
 }
-.dropdown.active .arrow .left-icon{
+.dropdown.active .left-icon{
     transform: rotate(135deg);
 }
-.dropdown.active .arrow .right-icon{
+.dropdown.active .right-icon{
     transform: rotate(-135deg);
 }
