@@ -21,7 +21,7 @@ body {
     background-color: rgb(37,37,37);
     display: flex;
     height: 80px;
-    width: 1782px;
+    width: 1622px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
 }
 .title{
@@ -57,50 +57,56 @@ nav ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
+    height: 100%;
 }
 nav ul li {
     display: flex;
-    align-items: center;
     position: relative;
+    padding: 0 20px ;
+    overflow: hidden;
 }
 nav ul li a {
     display: block;
+    line-height: 80px;
     text-decoration: none;
     color: var(--color-text);
-    padding: 0 20px ;
     font-size: 17px;
     -webkit-user-drag: none;
     user-select: none;
     margin-bottom: 0 !important;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 nav ul li a:hover {
     color: rgb(255, 255, 255);
 }
-/* nav ul li::before {
+nav ul li::before {
     content: '';
     position:absolute;
-    inset: calc(80%) 0 100px 0;
+    inset: calc(100% - 5px) 0 0 0;
     background-color: brown;
-} */
+    scale: 0 1;
+    transition: 0.3s, translate 0s 0.3s;
+}
+nav ul:hover li::before {
+    scale: 1;
+}
+nav ul li:hover::before {
+    translate: 0;
+    transition: 0.3s;
+}
+nav ul:hover li:has(~ li:hover)::before {
+    translate: 100% 0;
+    transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+nav ul:hover li:hover ~ li::before {
+    translate: -100% 0;
+    transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+
 
 .dropdown {
     position: relative;
     display: block;
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: 17px;
-    line-height: 80px;
-    -webkit-user-drag: none;
-    user-select: none;
-    margin-bottom: 0 !important;
-    width: 50pxx;
-    height: 80px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-.dropdown:hover {
-    color: white
 }
 .dropdown span {
     position: relative;
@@ -113,6 +119,7 @@ nav ul li a:hover {
 .left-icon, .right-icon{
     position: relative;
     display: inline-block;
+    bottom: 4px;
     width: 9px;
     height: 2px;
     border-radius: 20px;
@@ -121,10 +128,11 @@ nav ul li a:hover {
 
 .left-icon{
     transform: rotate(45deg);
-
+    left: 5px;
 }
 .right-icon{
     transform: rotate(-45deg);
+    right: 3px;
 }
 .dropdown.active .left-icon{
     transform: rotate(135deg);
