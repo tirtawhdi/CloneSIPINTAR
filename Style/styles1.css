@@ -21,7 +21,7 @@ body {
     background-color: rgb(37,37,37);
     display: flex;
     height: 80px;
-    width: 1600px;
+    width: 1782px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
 }
 .title{
@@ -39,7 +39,7 @@ body {
 .title h1{
     margin: 0px;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 30px;  
     color: white;
     width: 180px;
 }
@@ -47,36 +47,45 @@ body {
     text-decoration: none;
 }
 nav {
-    display: inline-block;
+    display: block;
     background-color: rgb(37,37,37);
     width: 100%;
     margin-left: 20px;
 }
 nav ul {
+    display: flex;
     list-style: none;
     padding: 0px;
     margin: 0px;
 }
 nav ul li {
-    float: left;
-    background-color: rgb(37,37,37);
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 nav ul li a {
     display: block;
     text-decoration: none;
     color: var(--color-text);
-    padding: 0 20px;
+    padding: 0 20px ;
     font-size: 17px;
-    line-height: 80px;
     -webkit-user-drag: none;
     user-select: none;
     margin-bottom: 0 !important;
+    transition: color 0.3s;
 }
 nav ul li a:hover {
     color: rgb(255, 255, 255);
 }
+/* nav ul li::before {
+    content: '';
+    position:absolute;
+    inset: calc(80%) 0 100px 0;
+    background-color: brown;
+} */
 
 .dropdown {
+    position: relative;
     display: block;
     text-decoration: none;
     color: var(--color-text);
@@ -88,31 +97,34 @@ nav ul li a:hover {
     width: 50pxx;
     height: 80px;
     cursor: pointer;
+    transition: color 0.3s;
 }
 .dropdown:hover {
     color: white
 }
-.dropdown:hover > span {
+.dropdown span {
+    position: relative;
+    background-color: var(--color-text);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;;
+}
+.dropdown:hover  span {
     background-color: white;
 }
 .left-icon, .right-icon{
     position: relative;
     display: inline-block;
-    bottom: 4px;
     width: 9px;
     height: 2px;
     border-radius: 20px;
     background-color: var(--color-text);
-    transition: transform 0.3s ease-in-out;
 }
 
 .left-icon{
     transform: rotate(45deg);
-    left: 2px;
+
 }
 .right-icon{
     transform: rotate(-45deg);
-    right: 6px;
 }
 .dropdown.active .left-icon{
     transform: rotate(135deg);
