@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    background-image: url(../Asset/bgPusdatin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat';
+    color: white;
+    
+}
+.header-container {
+    display: flex;
+    height: 80px;
+    width: 1500px;
+    border-radius: 5px;
+    background-color: rgb(37,37,37);
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
+}
+.title{
+    display: flex;
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 0%;
+    
+}
+.title img{
+    height: 60px;
+    width: 60px;
+}
+.title h1{
+    margin: 0px;
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
+    width: 180px;
+}
+.title a{
+    text-decoration: none;
+}
+.navbar {
+
+    justify-content: space-between
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+.navbar ul a {
+    text-decoration: none;
+}
+
+.navbar ul li {
+    font-size: 18px;
+    color: white;
+    padding: 5px;
+    padding-top: 21px;
+    padding-bottom: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    
+    
+}
+.navbar ul li:hover {
+     background-color: #e4ad15;
+    
+}
+.dropdown-profil{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 5px;
+    padding-top: 21px;
+    padding-bottom: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+.dropdown{
+    position: relative;
+    display:  inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #2b839e;color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-profil {background-color: #e4ad15;}
+
+
+
