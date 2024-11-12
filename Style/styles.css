@@ -6,17 +6,20 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow:hidden;
 }
+
+/* konten utama */
 .main-container {
     width: 100vw;
     height: 100vh;
     background-image: url(../Asset/bgPusdatin.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -40px;
     font-family: 'Montserrat', sans-serif; 
 }
+
+/* Konten header */
 .header-container {
     background-color: rgb(37,37,37);
     display: flex;
@@ -24,13 +27,16 @@ body {
     width: 1622px;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.678);
 }
+
+/* logo+text sipintar */
 .title{
     display: flex;
     margin-left: 30px;
     justify-content: center;
     align-items: center;
     gap: 25px;
-    
+    -webkit-user-drag: none;
+    user-select: none;
 }
 .title img{
     height: 60px;
@@ -46,11 +52,14 @@ body {
 .title a{
     text-decoration: none;
 }
+
+/* navbar konten */
 nav {
     display: block;
     background-color: rgb(37,37,37);
     width: 100%;
     margin-left: 20px;
+    
 }
 nav ul {
     display: flex;
@@ -63,12 +72,15 @@ nav ul li {
     display: flex;
     position: relative;
     padding: 0 20px ;
+    align-items: center;
     overflow: hidden;
 }
+
+/* text navbar decoration */
 nav ul li a {
-    display: block;
-    line-height: 80px;
+    display: inline-block;
     text-decoration: none;
+    line-height: 80px;
     color: var(--color-text);
     font-size: 17px;
     -webkit-user-drag: none;
@@ -76,9 +88,13 @@ nav ul li a {
     margin-bottom: 0 !important;
     transition: color 0.2s;
 }
+
+/* color text transition */
 nav ul li a:hover {
     color: rgb(255, 255, 255);
 }
+
+/* underline navbar iniatial*/
 nav ul li::before {
     content: '';
     position:absolute;
@@ -87,27 +103,37 @@ nav ul li::before {
     scale: 0 1;
     transition: 0.3s, translate 0s 0.3s;
 }
+
+/* underline animate in out*/
 nav ul:hover li::before {
     scale: 1;
 }
+
+/* li hover underline */
 nav ul li:hover::before {
     translate: 0;
     transition: 0.3s;
 }
+
+/* li yang ga di hover, underline move to right */
 nav ul:hover li:has(~ li:hover)::before {
     translate: 100% 0;
-    transition: 0.2s 0.2s, scale 0s 0.4s;
+    transition: 0.2s 0.1s, scale 0s 0.4s;
 }
+
+/* li who follow li hover , underline move to left */
 nav ul:hover li:hover ~ li::before {
     translate: -100% 0;
-    transition: 0.2s 0.2s, scale 0s 0.4s;
+    transition: 0.2s 0.1s, scale 0s 0.4s;
 }
-
-
+/* dropdown */
 .dropdown {
     position: relative;
     display: block;
+    right: 20px;
 }
+
+/* dropdown icon */
 .dropdown span {
     position: relative;
     background-color: var(--color-text);
@@ -139,4 +165,21 @@ nav ul:hover li:hover ~ li::before {
 }
 .dropdown.active .right-icon{
     transform: rotate(-135deg);
+}
+
+/* dropdown item styling */
+.dropdown .dropdown-items {
+    display: none;
+    height: 200px;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+.dropdown.active .dropdown-items {
+    display: block;
+}
+.dropdown .dropdown-items li {
+    background-color: rgb(37,37,37);
+    height: 50px;
 }
