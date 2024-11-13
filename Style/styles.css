@@ -57,7 +57,7 @@ body {
 nav {
     display: block;
     background-color: rgb(37,37,37);
-    width: 100%;
+    width: 1322px;
     margin-left: 20px;
     
 }
@@ -187,6 +187,10 @@ nav ul:hover li:hover ~ li::before {
     height: 215px;
     flex-direction: column;
     overflow: hidden;
+    visibility: hidden;
+}
+.dropdown.active .dropdown-content {
+    visibility: visible;
 }
 .dropdown .dropdown-content a {
     display: flex;
@@ -233,13 +237,6 @@ nav ul li .dropdown-2 > a {
     transform: rotate(-135deg);
 }
 
-.dropdown-2 .dropdown-2-content {
-    display: none;
-}
-.dropdown-2.active .dropdown-2-content {
-    display: block;
-}
-
 /* dropdown item 2 styling */
 .dropdown-2 .dropdown-content {
     position: absolute;
@@ -249,6 +246,10 @@ nav ul li .dropdown-2 > a {
     height: 215px;
     flex-direction: column;
     overflow: hidden;
+    visibility: hidden;
+}
+.dropdown-2.active .dropdown-content {
+    visibility: visible;
 }
 .dropdown-2 .dropdown-content a {
     display: flex;
@@ -269,3 +270,4 @@ nav ul li .dropdown-2 > a {
 .dropdown-2.active .dropdown-content a {
     bottom: 0;
 }
+
