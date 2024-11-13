@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const dropdown = document.querySelector('.dropdown');
+const dropdowns = document.querySelectorAll('.dropdown-2, .dropdown');
+dropdowns.forEach(dropdown => {
     dropdown.addEventListener('click', () => {
-        dropdown.classList.toggle('active');
+    dropdown.classList.toggle('active');
     });
-})
+});

@@ -16,7 +16,6 @@
  <!-- Bootstrap 5 JS -->
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
- <script src="Script/script.js"> </script>
 </head>
 <body>
     <div class="main-container">
@@ -33,11 +32,11 @@
                                 <span class="left-icon"></span>
                                 <span class="right-icon"></span>
                             </a>
-                                <ul class="dropdown-items">
-                                    <li><a href="">Profil Sekolah</a></li>
-                                    <li><a href="">Profil Program Keahlian</a></li>
-                                    <li><a href="">Profil Ekstrakurikuler</a></li>
-                                </ul>
+                            <div class="dropdown-content">
+                                <a style="--i:1;" href="#">Profil Sekolah</a>
+                                <a style="--i:2;" href="#">Profil Program Keahlian</a>
+                                <a style="--i:3;" href="#">Profil Ekstrakulikuler</a>
+                            </div>
                         </div>
                     </li>
                     <li><a href="">Agenda           </a></li>
@@ -46,13 +45,25 @@
                     <li><a href="">Koleksi Belajar  </a></li>
                     <li><a href="">Koleksi Web      </a></li>
                     <li><a href="">Galery           </a></li>
-                    <li><a href="">Download         </a></li>
+                    <li style="padding-right: 0 !important ;">         
+                        <div class="dropdown-2"> 
+                            <a href="#">Download
+                                <span class="left-icon"></span>
+                                <span class="right-icon"></span>
+                            </a>
+                            <div class="dropdown-content">
+                                <a style="--i:1;" href="#">SI PINTAR Mobile</a>
+                                <a style="--i:2;" href="#">Exambro Application</a>
+                            </div>
+                        </div>
+    
                     <li><a href="">Layanan Pengaduan</a></li>
                 </ul>
             </nav>
         </div>
     
         
-    </div>   
+    </div>
+<script src="Script/script.js"> </script>
 </body>
 </html>
