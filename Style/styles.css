@@ -279,6 +279,6 @@ nav ul li .dropdown-2 > a {
     width: 280px;
 }
 .social-media a {
-    color: aliceblue;
+    color: var(--color-text);
     font-size: 60px;
 }
