@@ -271,3 +271,14 @@ nav ul li .dropdown-2 > a {
     bottom: 0;
 }
 
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 280px;
+}
+.social-media a {
+    color: aliceblue;
+    font-size: 60px;
+}
