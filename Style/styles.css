@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --color-text: rgb(173, 173, 173);
+    --color-item: rgb(173, 173, 173);
+    --color-item-hover: rgb(255, 255, 255);
 }
 body {
     margin: 0;
@@ -57,7 +58,7 @@ body {
 nav {
     display: block;
     background-color: rgb(37,37,37);
-    width: 1322px;
+    width: 69%;
     margin-left: 20px;
     
 }
@@ -80,7 +81,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-item);
     font-size: 17px;
     -webkit-user-drag: none;
     user-select: none;
@@ -99,44 +100,8 @@ nav ul li .dropdown > a {
 
 /* color text transition */
 nav ul li a:hover {
-    color: rgb(255, 255, 255);
+    color: var(--color-item-hover)
 }
-
-
-/* underline navbar iniatial
-nav ul li::before {
-    content: '';
-    position:absolute;
-    inset: calc(100% - 5px) 0 0 0;
-    background-color: brown;
-    scale: 0 1;
-    transition: 0.3s, translate 0s 0.3s;
-}
-
-/* underline animate in out
-nav ul:hover li::before {
-    scale: 1;
-}
-
-/* li hover underline
-nav ul li:hover::before {
-    translate: 0;
-    transition: 0.3s;
-}
-
-/* li yang ga di hover, underline move to right
-nav ul:hover li:has(~ li:hover)::before {
-    translate: 100% 0;
-    transition: 0.2s 0.1s, scale 0s 0.4s;
-}
-
-/* li who follow li hover , underline move to left 
-nav ul:hover li:hover ~ li::before {
-    translate: -100% 0;
-    transition: 0.2s 0.1s, scale 0s 0.4s;
-}
-*/
-
 /* dropdown */
 .dropdown {
     position: relative;
@@ -147,11 +112,11 @@ nav ul:hover li:hover ~ li::before {
 /* dropdown icon */
 .dropdown span {
     position: relative;
-    background-color: var(--color-text);
+    background-color: var(--color-item);
     transition: background-color 0.3s, transform 0.3s ease-in-out;;
 }
 .dropdown:hover  span {
-    background-color: white;
+    background-color: var(--color-item-hover);
 }
 .left-icon, .right-icon{
     position: relative;
@@ -160,7 +125,7 @@ nav ul:hover li:hover ~ li::before {
     width: 9px;
     height: 2px;
     border-radius: 20px;
-    background-color: var(--color-text);
+    background-color: var(--color-item);
 }
 
 .left-icon{
@@ -212,8 +177,6 @@ nav ul:hover li:hover ~ li::before {
     bottom: 0;
 }
 
-
-
 /* dropdown 2 */
 nav ul li .dropdown-2 > a {
     display: inline-block;
@@ -224,7 +187,7 @@ nav ul li .dropdown-2 > a {
 /* dropdown 2 icon */
 .dropdown-2 span {
     position: relative;
-    background-color: var(--color-text);
+    background-color: var(--color-item);
     transition: background-color 0.3s, transform 0.3s ease-in-out;;
 }
 .dropdown-2:hover  span {
@@ -270,15 +233,95 @@ nav ul li .dropdown-2 > a {
 .dropdown-2.active .dropdown-content a {
     bottom: 0;
 }
-
-.social-media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 280px;
+.socialmedia-container {
+    display: block;
+    position: relative;
+    width: 293px;
 }
-.social-media a {
-    color: var(--color-text);
-    font-size: 60px;
+
+.socialmedia-container .socialmedia {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* sidebar */
+.socialmedia-container .socialmedia .sidebar-socialmedia  {
+    position: relative;
+    display: block;
+    width: 134px;
+
+
+}
+/* dropdown 2 icon */
+.sidebar-socialmedia span {
+    position: relative;
+    background-color: var(--color-item);
+    transition: background-color 0.3s, transform 0.3s ease-in-out;;
+}
+.sidebar-socialmedia:hover  span {
+    background-color: white;
+}
+.sidebar-socialmedia .bottom-icon, .top-icon{
+    position: relative;
+    display: inline-block;
+    bottom: 4px;
+    width: 9px;
+    height: 2px;
+    border-radius: 20px;
+    background-color: var(--color-item);
+}
+
+.sidebar-socialmedia .bottom-icon{
+    transform: rotate(-45deg);
+    bottom: 1px;
+    left: 3px;
+}
+.sidebar-socialmedia .top-icon{
+    transform: rotate( 45deg);
+    right: 10px;
+    bottom: 7px;
+
+}
+.sidebar-socialmedia.active .bottom-icon{
+    transform: rotate(-135deg);
+}
+.sidebar-socialmedia.active .top-icon{
+    transform: rotate(135deg);
+}
+.sidebar-socialmedia a {
+    text-decoration: none;
+    color: var(--color-item);
+    font-size: 17px;
+    -webkit-user-drag: none;
+    user-select: none;
+    transition: color 0.2s;
+    display: inline-block;
+    line-height: 80px;
+    margin-bottom: 0 !important;
+}
+.sidebar-socialmedia a:hover {
+    color: var(--color-item-hover);
+}
+.sidebar-socialmedia .socialmedia-content {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    bottom: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.sidebar-socialmedia .socialmedia-content a {
+    position: relative;
+    font-size: 30px;
+    padding: 0 5px;
+    right: 100%;
+    transition: 0.3s;
+    transition-delay: calc(60ms * var(--i));
+}
+.sidebar-socialmedia.active .socialmedia-content a {
+    right: 0;
+    visibility: visible;
 }
